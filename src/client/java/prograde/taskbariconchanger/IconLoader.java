@@ -140,7 +140,8 @@ public class IconLoader {
     // Currently this is 1.19.4 logic
     // In 1.20 MC changed so there is no separate load method anymore
     private static ByteBuffer readIconPixels(InputStream pTextureStream, IntBuffer pX, IntBuffer pY, IntBuffer pChannelInFile) throws IOException {
-        RenderSystem.assertInInitPhase();
+        //removed for 1.21 compatability, shouldn't be needed
+        //RenderSystem.assertInInitPhase();
         ByteBuffer bytebuffer = null;
 
         ByteBuffer bytebuffer1;
