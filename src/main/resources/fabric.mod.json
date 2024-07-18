@@ -1,0 +1,32 @@
+{
+	"schemaVersion": 1,
+	"id": "taskbariconchanger",
+	"version": "${version}",
+	"name": "TaskbarIconChanger",
+	"description": "Replaces the default taskbar icon with one in config/TaskbarIconChanger/icon.png",
+	"authors": [
+		"Prograde"
+	],
+	"icon": "assets/taskbariconchanger/icon.png",
+	"environment": "*",
+	"entrypoints": {
+		"main": [
+			"prograde.taskbariconchanger.TaskbarIconChanger"
+		],
+		"client": [
+			"prograde.taskbariconchanger.TaskbarIconChangerClient"
+		]
+	},
+	"mixins": [
+		"taskbariconchanger.mixins.json",
+		{
+			"config": "taskbariconchanger.client.mixins.json",
+			"environment": "client"
+		}
+	],
+	"depends": {
+		"fabricloader": ">=0.15.6",
+		"minecraft": ">=1.20.4",
+		"java": ">=17"
+	}
+}
